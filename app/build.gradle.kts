@@ -63,13 +63,31 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
-    // Retrofit
+    // Retrofit & OkHttp
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
 
     // Room
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+
+    // Timber
+    implementation(libs.timber)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v270)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Coil
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+
+    // Palette
+    implementation(libs.androidx.palette)
 
 }
