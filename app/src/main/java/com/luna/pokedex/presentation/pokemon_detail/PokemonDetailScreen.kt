@@ -240,7 +240,7 @@ fun PokemonTypeSection(
                     .height(35.dp)
             ) {
                 Text(
-                    text = type.type.name, // might return all caps
+                    text = type.type.name.replaceFirstChar { it.uppercase() },
                     color = Color.White,
                     fontSize = 18.sp
                 )
