@@ -144,7 +144,7 @@ fun PokemonList(
         }
         items(itemCount) {
             if(it >= itemCount - 1 && !endReached && !isLoading && !isSearching) {
-                viewModel.loadPokemonPaginated()
+                LaunchedEffect(Unit){ viewModel.loadPokemonPaginated() }
             }
             PokedexRow(
                 rowIndex = it,
